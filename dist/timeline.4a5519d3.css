@@ -1,0 +1,179 @@
+:root {
+  --recruitment-color: #4a90e2;
+  --design-color: #e24a4a;
+  --development-color: #20bd20;
+  --translation-color: #9c4ae2;
+  --default-color: #4a90e2;
+  --selected-color: #ffeb3b;
+  --text-color: #333;
+  --bg-color: #fafafa;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #757575;
+  --button-bg: #fff;
+  --button-hover: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 20px;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+header {
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.app-container h1 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 28px;
+}
+
+.controls {
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.controls button {
+  border: 1px solid var(--medium-gray);
+  background-color: var(--button-bg);
+  cursor: pointer;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all .2s;
+  display: flex;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.controls button:hover {
+  background-color: var(--button-hover);
+}
+
+.controls span {
+  text-align: center;
+  min-width: 60px;
+  font-weight: 500;
+}
+
+.timeline {
+  background-color: #fff;
+  border-radius: 8px;
+  min-height: 200px;
+  padding: 10px;
+  position: relative;
+  overflow: auto visible;
+  box-shadow: 0 2px 8px #0000000d;
+}
+
+.timeline-lane {
+  border-bottom: 1px solid var(--medium-gray);
+  height: 60px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.timeline-item {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 6px;
+  align-items: center;
+  height: 50px;
+  padding: 0 5px;
+  font-size: clamp(10px, 2vw, 12px);
+  transition: transform .2s;
+  display: flex;
+  position: absolute;
+  top: 5px;
+}
+
+.timeline-item:hover {
+  transform: scale(1.05);
+}
+
+.timeline-item.selected {
+  outline: 3px solid #ff0;
+}
+
+.tooltip {
+  color: #fff;
+  white-space: nowrap;
+  z-index: 20;
+  background: #000;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: .8rem;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+}
+
+.timeline-item:hover .tooltip {
+  display: block;
+}
+
+.timeline-header {
+  border-bottom: 2px solid var(--medium-gray);
+  height: 40px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.timeline-header-label {
+  color: var(--dark-gray);
+  white-space: nowrap;
+  background-color: var(--bg-color);
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  transform: translateX(0%);
+}
+
+.legend {
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.legend-item {
+  align-items: center;
+  gap: .3rem;
+  display: flex;
+}
+
+.color-box {
+  border-radius: 3px;
+  width: 15px;
+  height: 15px;
+}
+
+.current-day-line {
+  z-index: 10;
+  background: red;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+/*# sourceMappingURL=timeline.4a5519d3.css.map */
