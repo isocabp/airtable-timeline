@@ -70,7 +70,7 @@ The goal was to create a compact, space-efficient horizontal timeline where even
 
 1. Clone this repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/isocabp/airtable-timeline.git
    ```
 2. Navigate to the project directory:
    ```bash
